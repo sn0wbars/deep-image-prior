@@ -10,6 +10,7 @@ import PIL
 import numpy as np
 
 import matplotlib.pyplot as plt
+plt.grid(false)
 
 def crop_image(img, d=32):
     '''Make dimensions divisible by `d`'''
