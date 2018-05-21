@@ -77,11 +77,11 @@ def plot_image_grid(images_np, nrow =8, factor=1, interpolation=None):
     grid = get_image_grid(images_np, nrow)
     
     plt.figure(figsize=(len(images_np)+factor,12+factor))
-	plt.tick_params(axis=u'both', which=u'both',length=0)
     if images_np[0].shape[0] == 1:
         plt.imshow(grid[0], cmap='gray', interpolation=interpolation)
     else:
         plt.imshow(grid.transpose(1,2,0), interpolation=interpolation)
+    plt.grid(False)
     plt.show()
     
     return grid
